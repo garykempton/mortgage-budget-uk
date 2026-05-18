@@ -48,6 +48,7 @@ export const mainNav = [
   { title: 'Home', href: '/' },
   { title: 'Tools', href: '/tools' },
   { title: 'Guides', href: '/first-time-buyer-guide' },
+  { title: 'Blog', href: '/blog' },
   { title: 'About', href: '/about' },
   { title: 'Contact', href: '/contact' },
 ]
