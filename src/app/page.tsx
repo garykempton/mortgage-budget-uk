@@ -1,6 +1,20 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import CalculatorCard from '@/components/CalculatorCard'
 import { calculatorTools, guides } from '@/config/navigation'
+
+export const metadata: Metadata = {
+  title: 'Mortgage Budget UK — Free UK Mortgage Calculators & Guides',
+  description:
+    'Free UK mortgage calculators to help you budget for your home. Calculate repayments, affordability, stamp duty, and more. Simple tools for first-time buyers and homeowners.',
+  openGraph: {
+    title: 'Mortgage Budget UK — Free UK Mortgage Calculators & Guides',
+    description: 'Free UK mortgage calculators and guides. Calculate repayments, affordability, stamp duty, and more.',
+  },
+  alternates: {
+    canonical: '/',
+  },
+}
 
 export default function HomePage() {
   return (
