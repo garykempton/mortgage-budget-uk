@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { grantConsent } from './GoogleAnalytics'
+import { grantConsent, GA_ID } from './GoogleAnalytics'
 
 const COOKIE_KEY = 'cookie_consent'
 
@@ -21,6 +21,12 @@ export default function CookieConsent() {
   function accept() {
     localStorage.setItem(COOKIE_KEY, 'accepted')
     grantConsent()
+    // Send the page view that was blocked while consent was denied
+    if (GA_ID && typeof window.gtag === 'function') {
+      window.gtag('event', 'page_view', {
+        page_path: window.location.pathname,
+      })
+    }
     setVisible(false)
   }
 
