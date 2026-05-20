@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import RelatedTools from '@/components/RelatedTools'
+import AffiliateCTA from '@/components/AffiliateCTA'
 
 export const metadata: Metadata = {
   title: 'Is It Worth Overpaying Your Mortgage in 2026?',
@@ -115,6 +116,8 @@ export default function Page() {
           mortgage interest rate — with no risk.
         </p>
       </div>
+
+      <AffiliateCTA variant="blog" />
 
       <RelatedTools tools={relatedTools} />
 

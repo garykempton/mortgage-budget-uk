@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import RelatedTools from '@/components/RelatedTools'
+import AffiliateCTA from '@/components/AffiliateCTA'
 
 export const metadata: Metadata = {
   title: 'Fixed vs Variable Rate Mortgage — Which Should You Choose?',
@@ -144,6 +145,8 @@ export default function Page() {
           doubt, a 5-year fix gives you a solid window of certainty while you focus on enjoying your home.
         </p>
       </div>
+
+      <AffiliateCTA variant="blog" />
 
       <RelatedTools tools={relatedTools} />
 

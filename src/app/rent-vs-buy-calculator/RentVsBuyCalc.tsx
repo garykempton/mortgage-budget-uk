@@ -4,6 +4,8 @@ import { useState } from 'react'
 import PageHeader from '@/components/PageHeader'
 import FaqSection from '@/components/FaqSection'
 import RelatedTools from '@/components/RelatedTools'
+import AffiliateCTA from '@/components/AffiliateCTA'
+import NewsletterSignup from '@/components/NewsletterSignup'
 import { defaults } from '@/config/ukRates'
 
 interface Props {
@@ -191,6 +193,8 @@ export default function RentVsBuyCalc({ faqs, relatedTools }: Props) {
         </div>
       )}
 
+      {calculated && price > 0 && rent > 0 && <AffiliateCTA />}
+
       <section className="prose mt-12 max-w-none text-gray-700">
         <h2>Renting vs Buying: Key Differences</h2>
         <p>
@@ -211,6 +215,7 @@ export default function RentVsBuyCalc({ faqs, relatedTools }: Props) {
         </p>
       </section>
 
+      <NewsletterSignup />
       <FaqSection faqs={faqs} />
       <RelatedTools tools={relatedTools} />
     </div>

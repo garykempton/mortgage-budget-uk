@@ -4,6 +4,8 @@ import { useState } from 'react'
 import PageHeader from '@/components/PageHeader'
 import FaqSection from '@/components/FaqSection'
 import RelatedTools from '@/components/RelatedTools'
+import AffiliateCTA from '@/components/AffiliateCTA'
+import NewsletterSignup from '@/components/NewsletterSignup'
 import { defaults } from '@/config/ukRates'
 
 interface Props {
@@ -146,6 +148,8 @@ export default function RepaymentCalculator({ faqs, relatedTools }: Props) {
         </div>
       )}
 
+      {calculated && principal > 0 && <AffiliateCTA />}
+
       <section className="prose mt-12 max-w-none text-gray-700">
         <h2>How Are Monthly Mortgage Repayments Calculated?</h2>
         <p>
@@ -174,6 +178,7 @@ export default function RepaymentCalculator({ faqs, relatedTools }: Props) {
         </p>
       </section>
 
+      <NewsletterSignup />
       <FaqSection faqs={faqs} />
       <RelatedTools tools={relatedTools} />
     </div>

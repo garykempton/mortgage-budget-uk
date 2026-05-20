@@ -4,6 +4,8 @@ import { useState } from 'react'
 import PageHeader from '@/components/PageHeader'
 import FaqSection from '@/components/FaqSection'
 import RelatedTools from '@/components/RelatedTools'
+import AffiliateCTA from '@/components/AffiliateCTA'
+import NewsletterSignup from '@/components/NewsletterSignup'
 import { defaults } from '@/config/ukRates'
 
 interface Props {
@@ -162,6 +164,8 @@ export default function OverpaymentCalc({ faqs, relatedTools }: Props) {
         </div>
       )}
 
+      {calculated && result && <AffiliateCTA />}
+
       <section className="prose mt-12 max-w-none text-gray-700">
         <h2>How Do Mortgage Overpayments Work?</h2>
         <p>
@@ -181,6 +185,7 @@ export default function OverpaymentCalc({ faqs, relatedTools }: Props) {
         </ul>
       </section>
 
+      <NewsletterSignup />
       <FaqSection faqs={faqs} />
       <RelatedTools tools={relatedTools} />
     </div>

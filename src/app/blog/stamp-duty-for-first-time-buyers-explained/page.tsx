@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import RelatedTools from '@/components/RelatedTools'
+import AffiliateCTA from '@/components/AffiliateCTA'
 import { TAX_YEAR } from '@/config/ukRates'
 
 export const metadata: Metadata = {
@@ -156,6 +157,8 @@ export default function Page() {
           exact figure with our <Link href="/stamp-duty-calculator">stamp duty calculator</Link>.
         </p>
       </div>
+
+      <AffiliateCTA variant="blog" />
 
       <RelatedTools tools={relatedTools} />
 

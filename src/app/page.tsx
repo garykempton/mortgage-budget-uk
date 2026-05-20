@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import CalculatorCard from '@/components/CalculatorCard'
+import NewsletterSignup from '@/components/NewsletterSignup'
 import { calculatorTools, guides } from '@/config/navigation'
 
 export const metadata: Metadata = {
@@ -74,10 +75,31 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Trust strip */}
+      {/* Newsletter */}
       <section className="border-t border-gray-200">
-        <div className="mx-auto max-w-6xl px-4 py-12 text-center">
-          <p className="text-sm text-gray-500">
+        <div className="mx-auto max-w-2xl px-4 py-4">
+          <NewsletterSignup />
+        </div>
+      </section>
+
+      {/* Trust strip */}
+      <section className="border-t border-gray-200 bg-gray-50">
+        <div className="mx-auto max-w-6xl px-4 py-12">
+          <div className="grid gap-6 text-center sm:grid-cols-3">
+            <div>
+              <p className="text-2xl font-bold text-brand-700">100%</p>
+              <p className="mt-1 text-sm text-gray-600">Free to use, no sign-up required</p>
+            </div>
+            <div>
+              <p className="text-2xl font-bold text-brand-700">6</p>
+              <p className="mt-1 text-sm text-gray-600">UK-focused mortgage calculators</p>
+            </div>
+            <div>
+              <p className="text-2xl font-bold text-brand-700">2025-26</p>
+              <p className="mt-1 text-sm text-gray-600">Tax rates and data kept up to date</p>
+            </div>
+          </div>
+          <p className="mt-8 text-center text-sm text-gray-500">
             Mortgage Budget UK provides free tools for informational purposes only. We do not provide financial advice.
             Always speak to a qualified mortgage adviser before making decisions about your finances.
           </p>

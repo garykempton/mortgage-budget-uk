@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import RelatedTools from '@/components/RelatedTools'
+import AffiliateCTA from '@/components/AffiliateCTA'
 
 export const metadata: Metadata = {
   title: 'How Much Can I Borrow on a £30k Salary?',
@@ -119,6 +120,8 @@ export default function Page() {
           mortgage agreement in principle is the best way to find out your actual borrowing limit — and it is free.
         </p>
       </div>
+
+      <AffiliateCTA variant="blog" />
 
       <RelatedTools tools={relatedTools} />
 

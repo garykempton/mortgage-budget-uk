@@ -31,13 +31,29 @@ export default function PrivacyPolicyPage() {
 
         <h2>Cookies and Analytics</h2>
         <p>
-          We may use cookies and similar technologies to understand how visitors use our website. This helps us improve
-          our content and user experience. You can control cookie preferences through your browser settings.
+          We use cookies and similar technologies to understand how visitors use our website. When you first visit, a
+          consent banner lets you accept or reject non-essential cookies. We only enable analytics and advertising
+          cookies after you give consent.
         </p>
         <p>
-          We may use third-party analytics services (such as Google Analytics) which collect anonymous usage data. These
-          services use cookies to help us analyse traffic patterns. No personally identifiable information is shared with
-          these providers.
+          We use Google Analytics 4 (GA4) to collect anonymous usage data such as pages visited, session duration, and
+          referral source. Google Analytics uses cookies to help us analyse traffic patterns. No personally identifiable
+          information is shared with Google. You can opt out of Google Analytics at any time using the{' '}
+          <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">
+            Google Analytics Opt-out Browser Add-on
+          </a>.
+        </p>
+        <p>
+          <strong>Essential cookies</strong> (always active): These are required for the website to function, such as
+          remembering your cookie consent preference.
+        </p>
+        <p>
+          <strong>Analytics cookies</strong> (require consent): Used by Google Analytics to understand how visitors
+          interact with the site.
+        </p>
+        <p>
+          <strong>Advertising cookies</strong> (require consent): Used by advertising networks to serve relevant ads
+          and measure their effectiveness.
         </p>
 
         <h2>Advertising</h2>

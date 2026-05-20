@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import RelatedTools from '@/components/RelatedTools'
+import AffiliateCTA from '@/components/AffiliateCTA'
 
 export const metadata: Metadata = {
   title: 'How Much Deposit Do I Need to Buy a House in the UK?',
@@ -147,6 +148,8 @@ export default function Page() {
           <Link href="/mortgage-affordability-calculator">mortgage affordability calculator</Link>.
         </p>
       </div>
+
+      <AffiliateCTA variant="blog" />
 
       <RelatedTools tools={relatedTools} />
 

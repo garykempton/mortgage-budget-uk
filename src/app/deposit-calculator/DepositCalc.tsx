@@ -4,6 +4,8 @@ import { useState } from 'react'
 import PageHeader from '@/components/PageHeader'
 import FaqSection from '@/components/FaqSection'
 import RelatedTools from '@/components/RelatedTools'
+import AffiliateCTA from '@/components/AffiliateCTA'
+import NewsletterSignup from '@/components/NewsletterSignup'
 
 interface Props {
   faqs: { question: string; answer: string }[]
@@ -151,6 +153,8 @@ export default function DepositCalc({ faqs, relatedTools }: Props) {
         </div>
       )}
 
+      {calculated && price > 0 && <AffiliateCTA />}
+
       <section className="prose mt-12 max-w-none text-gray-700">
         <h2>How Much Deposit Do You Need?</h2>
         <p>
@@ -173,6 +177,7 @@ export default function DepositCalc({ faqs, relatedTools }: Props) {
         </ul>
       </section>
 
+      <NewsletterSignup />
       <FaqSection faqs={faqs} />
       <RelatedTools tools={relatedTools} />
     </div>
