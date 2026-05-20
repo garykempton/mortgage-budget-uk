@@ -21,8 +21,9 @@ export default function CookieConsent() {
   function accept() {
     localStorage.setItem(COOKIE_KEY, 'accepted')
     grantConsent()
+    console.log('[GA4] Consent granted, sending page_view')
     // Send the page view that was blocked while consent was denied
-    if (GA_ID && typeof window.gtag === 'function') {
+    if (typeof window.gtag === 'function') {
       window.gtag('event', 'page_view', {
         page_path: window.location.pathname,
       })

@@ -4,7 +4,11 @@ import Script from 'next/script'
 import { usePathname } from 'next/navigation'
 import { useEffect } from 'react'
 
-export const GA_ID = process.env.NEXT_PUBLIC_GA_ID || ''
+// GA Measurement IDs are public (visible in page source on every website).
+// Hardcoded because NEXT_PUBLIC_* env vars are inlined at build time —
+// if the var is missing during the Vercel build, the component gets
+// tree-shaken out permanently.
+export const GA_ID = 'G-FRH5HPZH3C'
 
 export function grantConsent() {
   if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
@@ -21,14 +25,12 @@ export default function GoogleAnalytics() {
   const pathname = usePathname()
 
   useEffect(() => {
-    if (GA_ID && typeof window.gtag === 'function') {
+    if (typeof window.gtag === 'function') {
       window.gtag('event', 'page_view', {
         page_path: pathname,
       })
     }
   }, [pathname])
-
-  if (!GA_ID) return null
 
   return (
     <>
@@ -48,6 +50,7 @@ export default function GoogleAnalytics() {
           });
           window.gtag('js', new Date());
           window.gtag('config', '${GA_ID}');
+          console.log('[GA4] Loaded: ${GA_ID}');
         `}
       </Script>
     </>
